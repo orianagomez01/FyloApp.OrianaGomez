@@ -1,0 +1,50 @@
+.fylo {
+    background-color: var(--white-goingtogrey-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8% 0;
+    overflow: hidden;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav__logo {
+    width: 40%;
+}
+
+.nav__img {
+    width: 100%;
+    display: block;
+}
+
+.nav__link:first-of-type {
+    display: none;
+}
+
+.nav__link:nth-of-type(2) {
+    margin-left: auto;
+}
+
+.nav__link {
+    display: inline-block;
+    margin-left: 3vh;
+    color: --black-color;
+    text-decoration: none;
+}
+
+.nav__icon {
+    width: 32px;
+}
+
+.line {
+    width: 90%;
+    border-bottom: solid 1px var(--grey-darker-color);
+    margin: auto;
+}

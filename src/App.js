@@ -1,12 +1,12 @@
-import logo from "./logo.svg";
-import "./App.css";
+// import logo from "./logo.svg";
+import "./App.scss";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
-    <>
-      <h1>Hola mundo con React!</h1>
-      <h2>Gomez, Oriana - React JS</h2>
-    </>
+    <div className="App">
+      <NavBar></NavBar>
+    </div>
   );
 }
 

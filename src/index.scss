@@ -1,0 +1,11 @@
+// ABSTRACTS 
+@use './scss/abstracts/variables';
+@use './scss/abstracts/mixins';
+
+// BASE
+@use './scss/base/base';
+@use './scss/base/resets';
+
+//LAYOUT
+@use './scss/layout/navbar';
+@use './scss/layout/mediaqueries';
