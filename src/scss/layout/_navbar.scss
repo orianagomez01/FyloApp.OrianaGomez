@@ -48,3 +48,16 @@
     border-bottom: solid 1px var(--grey-darker-color);
     margin: auto;
 }
+
+.greeting {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2% 0;
+    overflow: hidden;
+}
+
+.greeting__text {
+    font-size: 1.2rem;
+    font-weight: 600;
+}

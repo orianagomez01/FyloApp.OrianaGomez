@@ -1,11 +1,13 @@
 import React from "react";
-import logo from "../assets/logo.svg";
+import carritoIcono from "../assets/bx-cart.svg";
 
 const CartWidget = () => {
   return (
-    <figure className="nav__logo">
-      <img src={logo} className="nav__img" alt="Logo" />
-    </figure>
+    <img
+      src={carritoIcono}
+      className="nav__icon"
+      alt="Icono del carrito de compras"
+    />
   );
 };
 
