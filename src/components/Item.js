@@ -7,7 +7,7 @@ const Item = (product) => {
         <div className="card__content">
           <figure className="card__picture">
             <img
-              src="{product.picture}"
+              src={require(`../assets/${product.picture}`)}
               className="card__img"
               alt="Imagen del producto"
             />

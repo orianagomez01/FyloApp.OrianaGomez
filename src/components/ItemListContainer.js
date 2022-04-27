@@ -34,7 +34,7 @@ const ItemListContainer = (props) => {
 
       <div className="container">
         <h2>Nuestros productos</h2>
-        <ItemList></ItemList>
+        <ItemList product={product} />
       </div>
     </>
   );

@@ -6,7 +6,7 @@ export const productList = [
     price: 1490,
     tag: "Camisetas",
     size: ["XS", "S", "L"],
-    picture: "src/assets/catalogo__remeras.webp",
+    picture: "catalogo__remeras.webp",
     quantity: 1,
   },
   {
@@ -16,7 +16,7 @@ export const productList = [
     price: 800,
     tag: "Camisetas",
     size: ["XS", "S", "M", "XXL"],
-    picture: "../assets/catalogo__remeras2.webp",
+    picture: "catalogo__remeras2.webp",
     quantity: 1,
   },
   {
@@ -26,7 +26,7 @@ export const productList = [
     price: 999,
     tag: "Camisetas",
     size: ["XS", "M"],
-    picture: "../assets/catalogo__remeras4.webp",
+    picture: "catalogo__remeras4.webp",
     quantity: 1,
   },
   {
@@ -36,7 +36,7 @@ export const productList = [
     price: 3199,
     tag: "Camisetas",
     size: ["S", "XXL"],
-    picture: "../assets/catalogo__remeras5.webp",
+    picture: "catalogo__remeras5.webp",
     quantity: 1,
   },
   {
@@ -46,7 +46,7 @@ export const productList = [
     price: 8000,
     tag: "Camisetas",
     size: ["S", "XL"],
-    picture: "../assets/catalogo__remeras6.webp",
+    picture: "catalogo__remeras6.webp",
     quantity: 1,
   },
   {
@@ -56,7 +56,7 @@ export const productList = [
     price: 8252,
     tag: "Jeans",
     size: ["S", "L", "XXL"],
-    picture: "../assets/catalogo__jeans.webp",
+    picture: "catalogo__jeans.webp",
     quantity: 1,
   },
   {
@@ -66,7 +66,7 @@ export const productList = [
     price: 4999,
     tag: "Jeans",
     size: ["XS", "M", "L", "XL"],
-    picture: "../assets/catalogo__jeans2.webp",
+    picture: "catalogo__jeans2.webp",
     quantity: 1,
   },
   {
@@ -76,7 +76,7 @@ export const productList = [
     price: 4794,
     tag: "Jeans",
     size: ["XS", "S", "XL"],
-    picture: "../assets/catalogo__jeans3.webp",
+    picture: "catalogo__jeans3.webp",
     quantity: 1,
   },
   {
@@ -86,7 +86,7 @@ export const productList = [
     price: 8290,
     tag: "Jeans",
     size: ["XS", "S", "M"],
-    picture: "../assets/catalogo__jeans4.webp",
+    picture: "catalogo__jeans4.webp",
     quantity: 1,
   },
   {
@@ -96,7 +96,7 @@ export const productList = [
     price: 6500,
     tag: "Jeans",
     size: ["M", "L"],
-    picture: "../assets/catalogo__jeans5.webp",
+    picture: "catalogo__jeans5.webp",
     quantity: 1,
   },
   {
@@ -106,7 +106,7 @@ export const productList = [
     price: 7200,
     tag: "Jeans",
     size: ["XS", "XL"],
-    picture: "../assets/catalogo__jeans6.webp",
+    picture: "catalogo__jeans6.webp",
     quantity: 1,
   },
   {
@@ -116,7 +116,7 @@ export const productList = [
     price: 3400,
     tag: "Camisetas",
     size: ["S", "L"],
-    picture: "../assets/catalogo__remeras7.webp",
+    picture: "catalogo__remeras7.webp",
     quantity: 1,
   },
 ];
