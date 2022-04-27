@@ -6,7 +6,7 @@ export const productList = [
     price: 1490,
     tag: "Camisetas",
     size: ["XS", "S", "L"],
-    picture: "../assets/catalogo__remeras.webp",
+    picture: "src/assets/catalogo__remeras.webp",
     quantity: 1,
   },
   {
