@@ -1,6 +1,6 @@
 import React from "react";
 import CartWidget from "./CartWidget";
-import ItemListContainer from "./ItemListContainer";
+// import ItemListContainer from "./ItemListContainer";
 import usuarioIcono from "../assets/bx-user.svg";
 import busquedaIcono from "../assets/bx-search.svg";
 import menuIcono from "../assets/bx-menu.svg";
@@ -35,7 +35,6 @@ const NavBar = () => {
         </a>
       </nav>
       <div className="line"></div>
-      <ItemListContainer name="Oriana"></ItemListContainer>
     </header>
   );
 };

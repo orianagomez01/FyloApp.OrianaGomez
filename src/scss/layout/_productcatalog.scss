@@ -1,0 +1,47 @@
+.card__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+.card__img {
+    width: 100%;
+    object-fit: cover;
+    max-width: 600px;
+}
+
+.card__title {
+    font-family: var(--body-font);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.card__texts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+}
+
+.card__paragraph,
+.card__price {
+    font-family: var(--body-font);
+    font-weight: 500;
+}
+
+.card__paragraph {
+    color: var(--grey-font);
+}
+
+.card__price {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.card__btn {
+    background-color: var(--green-color);
+    color: var(--white-goingtogrey-color);
+    font-family: var(--body-font);
+    border: var(--green-color) solid 1px;
+    padding: 2% 3%;
+
+}
