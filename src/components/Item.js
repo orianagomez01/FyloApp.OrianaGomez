@@ -1,6 +1,6 @@
 import React from "react";
 
-const Item = (product) => {
+const Item = ({ product }) => {
   return (
     <div className="card__container container">
       <article className="card__item">
