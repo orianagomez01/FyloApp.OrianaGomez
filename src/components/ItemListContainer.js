@@ -32,9 +32,9 @@ const ItemListContainer = (props) => {
         <h1 className="greeting__text">Bienvenidx {props.name}</h1>
       </div>
 
-      <div className="container">
+      <div className="greeting">
         <h2>Nuestros productos</h2>
-        <ItemList product={product} />
+        <ItemList products={product} />
       </div>
     </>
   );
