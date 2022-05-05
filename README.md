@@ -6,6 +6,7 @@ Proyecto de un E-Commerce de indumentaria para mujeres con diseño web responsiv
 — HTML </br>
 — CSS </br>
 — JAVASCRIPT 
+— REACT JS 
 
 </br>
 <h4>**Oriana Gomez** </br></h4>
