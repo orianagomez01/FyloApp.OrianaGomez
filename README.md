@@ -5,7 +5,7 @@ Proyecto de un E-Commerce de indumentaria para mujeres con diseño web responsiv
 <h3>Tecnologías utilizadas: </h3>
 — HTML </br>
 — CSS </br>
-— JAVASCRIPT 
+— JAVASCRIPT </br> 
 — REACT JS 
 
 </br>
