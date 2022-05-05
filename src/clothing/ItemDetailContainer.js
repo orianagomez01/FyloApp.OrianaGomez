@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 // import { robotsData } from "../../data/robotsData"
 // import RobotCard from "./RobotCard";
 
-import { productList } from "../data/dataProduct";
+import { productListMen } from "../data/dataProductMen";
 import ItemCard from "./ItemCard";
+import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
   const [items, setItem] = useState([]);
@@ -17,32 +18,13 @@ const ItemDetailContainer = () => {
   const getItems = () => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve(productList);
+        resolve(productListMen);
       }, 2000);
     });
   };
 
-  // const RobotsContainer = () => {
-  //   const [robots, setRobots] = useState([]);
-  //   const [loading, setLoading] = useState(true);
-
-  //   useEffect(() => {
-  //     getRobots().then((data) => {
-  //       setRobots(data);
-  //       setLoading(false);
-  //     });
-  //   }, []);
-
-  //   const getRobots = () => {
-  //     return new Promise((resolve, reject) => {
-  //       setTimeout(() => {
-  //         resolve(robotsData);
-  //       }, 2000);
-  //     });
-  //   };
-
   return (
-    <div>
+    <div className="card">
       {items.map((r) => (
         <ItemCard key={r.id} data={r} />
       ))}

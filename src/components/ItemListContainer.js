@@ -2,6 +2,7 @@ import React from "react";
 import ItemList from "./ItemList";
 import { useEffect, useState } from "react";
 import { productList } from "../data/dataProduct";
+import { Link } from "react-router-dom";
 
 const ItemListContainer = (props) => {
   const [product, setProduct] = useState([]);
@@ -34,6 +35,16 @@ const ItemListContainer = (props) => {
 
       <div className="greeting">
         <h2>Nuestros productos</h2>
+
+        <div className="">
+          <button>Indumentaria de mujeres</button>
+        </div>
+        <div className="">
+          <Link to={`/clothing/ItemDetailContainer`}>
+            <button>Indumentaria de hombres</button>
+          </Link>
+        </div>
+
         <ItemList products={product} />
       </div>
     </>

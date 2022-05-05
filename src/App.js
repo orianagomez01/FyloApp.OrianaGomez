@@ -3,7 +3,8 @@ import "./App.scss";
 import NavBar from "./components/NavBar";
 import ItemListContainer from "./components/ItemListContainer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ItemDetailContainer from "./components/ItemDetailContainer";
+import ItemDetailContainer from "./clothing/ItemDetailContainer";
+// import ItemDetail from "./clothing/ItemDetail";
 
 function App() {
   return (
@@ -18,6 +19,11 @@ function App() {
             path="/"
             element={<ItemListContainer name="Oriana"></ItemListContainer>}
           />
+
+          <Route
+            path="/clothing/:ItemId"
+            element={<ItemDetailContainer></ItemDetailContainer>}
+          ></Route>
         </Routes>
       </BrowserRouter>
     </div>
