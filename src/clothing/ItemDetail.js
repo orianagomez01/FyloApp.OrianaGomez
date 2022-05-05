@@ -1,28 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { productListMen } from "../data/dataProductMen";
+import React from "react";
 
-const ItemDetail = () => {
-  const { ItemId } = useParams();
-  const [Item, setItem] = useState({});
-
-  useEffect(() => {
-    (async () => {
-      const itemData = await getClothesDetail();
-      if (itemData) {
-        setItem(itemData);
-      }
-    })();
-  }, [ItemId]);
-
-  const getClothesDetail = () => {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(productListMen.find((r) => r.id === ItemId));
-      }, 1000);
-    });
-  };
-
+const ItemDetail = ({ id, title, description, category, picture, price }) => {
   return (
     <>
       <div className="item__container">
@@ -30,16 +8,16 @@ const ItemDetail = () => {
           <div className="item__content">
             <figure className="item__picture">
               <img
-                src={require(`../assets/${Item.picture}`)}
+                src={require(`../assets/${picture}`)}
                 className="item__img"
-                alt="Imagen del producto"
+                alt={`${id}-${title}`}
               />
             </figure>
 
             <div className="item__texts">
-              <h2 className="item__title">{Item.title}</h2>
-              <p className="item__paragraph">{Item.description}</p>
-              <p className="item__price">${Item.price}</p>
+              <h1 className="item__title">{title}</h1>
+              <p className="item__paragraph">{description}</p>
+              <p className="item__price">${price}</p>
 
               <form className="item__selection">
                 <div class="radiobtn">
@@ -69,7 +47,7 @@ const ItemDetail = () => {
                   <label for="huey">XXL</label>
                 </div>
               </form>
-              <button id="{data.id}" className="card__btn">
+              <button id="{item.id}" className="card__btn">
                 Añadir al carrito
               </button>
             </div>

@@ -1,34 +1,57 @@
-import { useEffect, useState } from "react";
-// import { robotsData } from "../../data/robotsData"
-// import RobotCard from "./RobotCard";
-
-import { productListMen } from "../data/dataProductMen";
-import ItemCard from "./ItemCard";
+import React, { useEffect, useState } from "react";
+// data
+import { productList } from "../data/dataProduct";
+// item details
 import ItemDetail from "./ItemDetail";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
-  const [items, setItem] = useState([]);
+  const [items, setItem] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  const { itemId } = useParams();
+
+  console.log(itemId);
 
   useEffect(() => {
-    getItems().then((data) => {
-      setItem(data);
-    });
-  }, []);
-
-  const getItems = () => {
-    return new Promise((resolve, reject) => {
+    setLoading(true);
+    const getItems = new Promise((resolve) => {
       setTimeout(() => {
-        resolve(productListMen);
-      }, 2000);
-    });
-  };
+        const findData = productList.find((item) => item.id === itemId);
 
-  return (
-    <div className="card">
-      {items.map((r) => (
-        <ItemCard key={r.id} data={r} />
-      ))}
-    </div>
-  );
+        resolve(findData);
+      }, 1000);
+    });
+
+    getItems
+      .then((res) => {
+        setItem(res);
+      })
+      .finally(() => setLoading(false));
+  }, [itemId]);
+
+  // return
+
+  //   loading ? <h2>CARGANDO...</h2> : <ItemDetail {...items}></ItemDetail>;
+  // <div>
+  //   {items ? (
+  //     <ItemDetail products={items} />
+  //   ) : (
+  //     <p> Obteniendo productos...</p>
+  //   )}
+  {
+    /* {items.map((i) => (
+        <ItemDetail key={i.id} data={i} />
+      ))} */
+  }
+
+  {
+    /* {items.map((r) => (
+      <ItemDetail {...items} />
+       ))} */
+  }
+  // </div>
+
+  return loading ? <h2>CARGANDO...</h2> : <ItemDetail {...items} />;
 };
 export default ItemDetailContainer;

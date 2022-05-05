@@ -20,9 +20,12 @@ function App() {
             element={<ItemListContainer name="Oriana"></ItemListContainer>}
           />
 
+          {/* vista de detalle */}
+          <Route path="/items/:itemId" element={<ItemDetailContainer />} />
+
           <Route
-            path="/clothing/:ItemId"
-            element={<ItemDetailContainer></ItemDetailContainer>}
+            path="/category/:categoryId"
+            element={<ItemListContainer></ItemListContainer>}
           ></Route>
         </Routes>
       </BrowserRouter>
