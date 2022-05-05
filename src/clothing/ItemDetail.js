@@ -1,6 +1,6 @@
 import React from "react";
 
-const ItemDetail = ({ id, title, description, category, picture, price }) => {
+const ItemDetail = ({ data }) => {
   return (
     <>
       <div className="item__container">
@@ -8,16 +8,16 @@ const ItemDetail = ({ id, title, description, category, picture, price }) => {
           <div className="item__content">
             <figure className="item__picture">
               <img
-                src={require(`../assets/${picture}`)}
+                src={require(`../assets/${data.picture}`)}
                 className="item__img"
-                alt={`${id}-${title}`}
+                alt={`${data.id}-${data.title}`}
               />
             </figure>
 
             <div className="item__texts">
-              <h1 className="item__title">{title}</h1>
-              <p className="item__paragraph">{description}</p>
-              <p className="item__price">${price}</p>
+              <h1 className="item__title">{data.title}</h1>
+              <p className="item__paragraph">{data.description}</p>
+              <p className="item__price">${data.price}</p>
 
               <form className="item__selection">
                 <div class="radiobtn">

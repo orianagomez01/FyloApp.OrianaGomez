@@ -1,6 +1,6 @@
 # E-Commerce Fylo — Aplicación Web
 
-Proyecto de un E-Commerce de indumentaria para mujeres con diseño web responsivo.
+Proyecto de un E-Commerce de indumentaria con diseño web responsivo.
 
 <h3>Tecnologías utilizadas: </h3>
 — HTML </br>
