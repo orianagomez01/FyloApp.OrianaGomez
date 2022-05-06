@@ -1,0 +1,43 @@
+.item__container {
+    width: 60%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8% 0;
+    overflow: hidden;
+}
+
+.item {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5em;
+}
+
+.item__content {
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+.item__texts {
+    grid-column: 2 / 2;
+    grid-row: 1;
+}
+
+.item__title {
+    font-size: 2.3rem;
+}
+
+.item__price {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.item__size {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.item__sizes {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}

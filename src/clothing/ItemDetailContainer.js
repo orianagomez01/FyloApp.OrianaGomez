@@ -4,6 +4,7 @@ import { productList } from "../data/dataProduct";
 // item details
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
+import Spinner from "react-bootstrap/Spinner";
 
 const ItemDetailContainer = () => {
   const [items, setItem] = useState({});
@@ -30,28 +31,12 @@ const ItemDetailContainer = () => {
       .finally(() => setLoading(false));
   }, [itemId]);
 
-  // return
-
-  //   loading ? <h2>CARGANDO...</h2> : <ItemDetail {...items}></ItemDetail>;
-  // <div>
-  //   {items ? (
-  //     <ItemDetail products={items} />
-  //   ) : (
-  //     <p> Obteniendo productos...</p>
-  //   )}
-  {
-    /* {items.map((i) => (
-        <ItemDetail key={i.id} data={i} />
-      ))} */
-  }
-
-  {
-    /* {items.map((r) => (
-      <ItemDetail {...items} />
-       ))} */
-  }
-  // </div>
-
-  return loading ? <h2>CARGANDO...</h2> : <ItemDetail {...items} />;
+  return loading ? (
+    <Spinner animation="border" role="status">
+      <span className="visually-hidden">Loading...</span>
+    </Spinner>
+  ) : (
+    <ItemDetail {...items} />
+  );
 };
 export default ItemDetailContainer;

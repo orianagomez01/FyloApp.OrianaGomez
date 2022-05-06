@@ -4,23 +4,23 @@ import { Link } from "react-router-dom";
 const Item = ({ products }) => {
   return (
     <>
-      <div className="card__container container">
-        <article className="card__item">
-          <div className="card__content">
-            <figure className="card__picture">
+      <div className="product__container container-page">
+        <article className="product__item">
+          <div className="product__content">
+            <figure className="product__picture">
               <img
                 src={require(`../assets/${products.picture}`)}
-                className="card__img"
+                className="product__img"
                 alt="Imagen del producto"
               />
             </figure>
 
-            <div className="card__texts">
-              <h2 className="card__title">{products.title}</h2>
-              <p className="card__paragraph">{products.description}</p>
-              <p className="card__price">${products.price}</p>
+            <div className="product__texts">
+              <h2 className="product__title">{products.title}</h2>
+              <p className="product__paragraph">{products.description}</p>
+              <p className="product__price">${products.price}</p>
               <Link to={`/items/${products.id}`}>
-                <button id="{products.id}" className="card__btn">
+                <button id="{products.id}" className="product__btn">
                   Ver producto
                 </button>
               </Link>

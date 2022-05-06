@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <header className="fylo">
-      <nav className="nav container">
+      <nav className="nav container-page">
         <figure className="nav__logo">
           <img src={logo} className="nav__img" alt="Logo" />
         </figure>

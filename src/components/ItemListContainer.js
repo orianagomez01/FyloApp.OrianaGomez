@@ -2,7 +2,7 @@ import React from "react";
 import ItemList from "./ItemList";
 import { useEffect, useState } from "react";
 import { productList } from "../data/dataProduct";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import { useParams } from "react-router-dom";
 
