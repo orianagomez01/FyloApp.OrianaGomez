@@ -1,10 +1,8 @@
-// import logo from "./logo.svg";
 import "./App.scss";
 import NavBar from "./components/NavBar";
 import ItemListContainer from "./components/ItemListContainer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ItemDetailContainer from "./clothing/ItemDetailContainer";
-// import ItemDetail from "./clothing/ItemDetail";
 
 function App() {
   return (

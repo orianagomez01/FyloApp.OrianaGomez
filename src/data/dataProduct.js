@@ -1,6 +1,6 @@
 export const productList = [
   {
-    id: 1,
+    id: "uno",
     title: "Portsaid",
     description: "Top PORTSAID Verde con Flores Rosas",
     price: 1490,
@@ -11,7 +11,7 @@ export const productList = [
     category: "women",
   },
   {
-    id: 2,
+    id: "dos",
     title: "Lacoste",
     description: "Top LACOSTE Color Beige",
     price: 800,
@@ -22,7 +22,7 @@ export const productList = [
     category: "women",
   },
   {
-    id: 3,
+    id: "tres",
     title: "Skanda",
     description: "Camiseta SKANDA de San Diego, Surf Club",
     price: 999,
@@ -33,7 +33,7 @@ export const productList = [
     category: "women",
   },
   {
-    id: 4,
+    id: "cuatro",
     title: "47 Street",
     description: "Camiseta 47 STREET Luna y Sol",
     price: 3199,
@@ -44,7 +44,7 @@ export const productList = [
     category: "women",
   },
   {
-    id: 5,
+    id: "cinco",
     title: "Laile",
     description: "Camisa LAILE de Colores Ocre",
     price: 8000,
@@ -55,7 +55,7 @@ export const productList = [
     category: "women",
   },
   {
-    id: 6,
+    id: "seis",
     title: "Prussia",
     description: "Pantalón PRUSSIA con Lino",
     price: 8252,
@@ -66,7 +66,7 @@ export const productList = [
     category: "women",
   },
   {
-    id: 7,
+    id: "siete",
     title: "EcoSistema",
     description: "Pantalón ECOSISTEMA con Cierre",
     price: 4999,
@@ -77,7 +77,7 @@ export const productList = [
     category: "women",
   },
   {
-    id: 8,
+    id: "ocho",
     title: "System",
     description: "Pantalón Jean SYSTEM Tiro Alto",
     price: 4794,
@@ -88,7 +88,7 @@ export const productList = [
     category: "women",
   },
   {
-    id: 9,
+    id: "nueve",
     title: "Wanama",
     description: "Pantalón Jean WANAMA Negro",
     price: 8290,
@@ -99,7 +99,7 @@ export const productList = [
     category: "women",
   },
   {
-    id: 10,
+    id: "diez",
     title: "Mistral",
     description: "Pantalón Jean MISTRAL Tobillero",
     price: 6500,
@@ -110,7 +110,7 @@ export const productList = [
     category: "women",
   },
   {
-    id: 11,
+    id: "once",
     title: "Step Back",
     description: "Pantalón Jean STEP BACK Tiro Alto",
     price: 7200,
@@ -121,7 +121,7 @@ export const productList = [
     category: "women",
   },
   {
-    id: 12,
+    id: "doce",
     title: "Maryland",
     description: "Buzo MARYLAND West Virginia",
     price: 3400,
@@ -132,7 +132,7 @@ export const productList = [
     category: "women",
   },
   {
-    id: 13,
+    id: "trece",
     title: "Mystic",
     description: "Buzo marrón Mystic",
     price: 5990,
@@ -143,7 +143,7 @@ export const productList = [
     category: "men",
   },
   {
-    id: 14,
+    id: "catorce",
     title: "North Face",
     description: "Campera puffer NORTH FACE",
     price: 6400,
@@ -154,7 +154,7 @@ export const productList = [
     category: "men",
   },
   {
-    id: 15,
+    id: "quince",
     title: "Club Everything",
     description: "Campera rosa CLUB EVERYTHING",
     price: 3200,
@@ -165,7 +165,7 @@ export const productList = [
     category: "men",
   },
   {
-    id: 16,
+    id: "dieciseis",
     title: "Levi",
     description: "Pantalón LEVI Baggy",
     price: 3199,
@@ -176,7 +176,7 @@ export const productList = [
     category: "men",
   },
   {
-    id: 17,
+    id: "diecisiete",
     title: "Start Up",
     description: "Pantalón START UP",
     price: 8000,
@@ -187,7 +187,7 @@ export const productList = [
     category: "men",
   },
   {
-    id: 18,
+    id: "dieciocho",
     title: "Seul",
     description: "Pantalón SEUL con Lino",
     price: 8252,
@@ -198,7 +198,7 @@ export const productList = [
     category: "men",
   },
   {
-    id: 19,
+    id: "diecinueve",
     title: "EcoSistema",
     description: "Pantalón ECOSISTEMA con Cierre",
     price: 4999,
@@ -209,7 +209,7 @@ export const productList = [
     category: "men",
   },
   {
-    id: 20,
+    id: "veinte",
     title: "System",
     description: "Pantalón Jean SYSTEM Tiro Alto",
     price: 4794,
@@ -220,7 +220,7 @@ export const productList = [
     category: "men",
   },
   {
-    id: 21,
+    id: "veintiuno",
     title: "Wanama",
     description: "Pantalón Jean WANAMA Negro",
     price: 8290,
@@ -231,7 +231,7 @@ export const productList = [
     category: "men",
   },
   {
-    id: 22,
+    id: "veintidos",
     title: "Mistral",
     description: "Pantalón Jean MISTRAL Tobillero",
     price: 6500,
@@ -242,7 +242,7 @@ export const productList = [
     category: "men",
   },
   {
-    id: 23,
+    id: "veintitres",
     title: "Step Back",
     description: "Pantalón Jean STEP BACK Tiro Alto",
     price: 7200,
@@ -253,7 +253,7 @@ export const productList = [
     category: "men",
   },
   {
-    id: 24,
+    id: "veinticuatro",
     title: "Maryland",
     description: "Buzo MARYLAND West Virginia",
     price: 3400,
