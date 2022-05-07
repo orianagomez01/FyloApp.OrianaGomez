@@ -24,6 +24,15 @@
         display: block;
     }
 
+    &__links--items {
+        margin: 0 auto;
+    }
+
+    &__link--center {
+        margin: 0 auto;
+        align-items: center;
+    }
+
     &__link:first-of-type {
         display: none;
     }
