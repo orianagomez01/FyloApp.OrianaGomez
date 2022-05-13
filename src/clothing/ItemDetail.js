@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import ToggleButton from "react-bootstrap/ToggleButton";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
+
+import ItemCount from "./ItemCount";
+import { Link } from "react-router-dom";
 
 const ItemDetail = (data) => {
+  // const cart = useContext(CartContext);
+
+  const [terminar, setTerminar] = useState(false);
+
+  const onAdd = (count) => {
+    setTerminar(true);
+    console.log(count);
+  };
+
   return (
     <>
       <div className="item__container">
@@ -22,7 +36,6 @@ const ItemDetail = (data) => {
             <p className="item__paragraph">{data.description}</p>
             <p className="item__price">${data.price}</p>
             <p className="item__size">Talle</p>
-
             <div className="item__sizes">
               <ToggleButton variant="outline-secondary">XS</ToggleButton>
               <ToggleButton variant="outline-secondary">M</ToggleButton>
@@ -30,9 +43,17 @@ const ItemDetail = (data) => {
               <ToggleButton variant="outline-secondary">XL</ToggleButton>
               <ToggleButton variant="outline-secondary">XXL</ToggleButton>
             </div>
-            <button id="{item.id}" className="product__btn">
-              Añadir al carrito
-            </button>
+            {terminar ? (
+              <Link to="/cart" id="{item.id}" className="product__btn">
+                Finalizar compra
+              </Link>
+            ) : (
+              <ItemCount
+                data={data.quantity}
+                onAdd={onAdd}
+                id={data.id}
+              ></ItemCount>
+            )}
           </div>
         </article>
       </div>

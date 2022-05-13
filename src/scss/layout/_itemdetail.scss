@@ -39,5 +39,16 @@
 
 .item__sizes {
     margin-top: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+}
+
+.item__quantities {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 3em;
+}
+
+.item__quantity {
+    align-items: center;
 }

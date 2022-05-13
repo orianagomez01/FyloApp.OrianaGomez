@@ -43,16 +43,6 @@ const ItemListContainer = (props) => {
 
       <div className="greeting">
         <h2>Nuestros productos</h2>
-
-        {/* <div className="">
-          <button>Indumentaria de mujeres</button>
-        </div>
-        <div className="">
-          <Link to={`/clothing/ItemDetailContainer`}>
-            <button>Indumentaria de hombres</button>
-          </Link>
-        </div> */}
-
         <ItemList products={product} />
       </div>
     </>

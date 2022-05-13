@@ -25,13 +25,9 @@
     }
 
     &__links--items {
-        margin: 0 auto;
+        margin-left: auto;
     }
 
-    &__link--center {
-        margin: 0 auto;
-        align-items: center;
-    }
 
     &__link:first-of-type {
         display: none;
