@@ -1,20 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import ToggleButton from "react-bootstrap/ToggleButton";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 import ItemCount from "./ItemCount";
-import { Link } from "react-router-dom";
 
 const ItemDetail = (data) => {
-  // const cart = useContext(CartContext);
+  const cartContext = useContext(CartContext);
+  const { cart, addItem } = CartContext;
 
-  const [terminar, setTerminar] = useState(false);
-
-  const onAdd = (count) => {
-    setTerminar(true);
-    console.log(count);
+  const onAdd = (quantity) => {
+    addItem(data, quantity);
   };
 
   return (
@@ -43,7 +40,15 @@ const ItemDetail = (data) => {
               <ToggleButton variant="outline-secondary">XL</ToggleButton>
               <ToggleButton variant="outline-secondary">XXL</ToggleButton>
             </div>
-            {terminar ? (
+
+            <ItemCount stock={data.stock} initial={1} onAdd={onAdd}></ItemCount>
+
+            {/* // const onAdd = (count) => {
+  //   setTerminar(true);
+  //   console.log(count);
+  // }; */}
+
+            {/* {terminar ? (
               <Link to="/cart" id="{item.id}" className="product__btn">
                 Finalizar compra
               </Link>
@@ -53,7 +58,7 @@ const ItemDetail = (data) => {
                 onAdd={onAdd}
                 id={data.id}
               ></ItemCount>
-            )}
+            )} */}
           </div>
         </article>
       </div>
