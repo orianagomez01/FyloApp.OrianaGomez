@@ -1,18 +1,17 @@
 import React from "react";
 import ToggleButton from "react-bootstrap/ToggleButton";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useContext } from "react";
-import { CartContext } from "../context/CartContext";
+import { useCartContext } from "../context/CartContext";
 
 import ItemCount from "./ItemCount";
 
 const ItemDetail = (data) => {
-  const cartContext = useContext(CartContext);
-  const { addItem } = CartContext;
+  const { addItem } = useCartContext;
 
-  const onAdd = (quantity) => {
+  function onAdd(quantity) {
+    console.log("cantidad en carrito" + quantity);
     addItem(data, quantity);
-  };
+  }
 
   return (
     <>
@@ -42,27 +41,10 @@ const ItemDetail = (data) => {
             </div>
 
             <ItemCount
-              stock={data.quantity}
+              data={data.quantity}
               initial={1}
               onAdd={onAdd}
             ></ItemCount>
-
-            {/* // const onAdd = (count) => {
-  //   setTerminar(true);
-  //   console.log(count);
-  // }; */}
-
-            {/* {terminar ? (
-              <Link to="/cart" id="{item.id}" className="product__btn">
-                Finalizar compra
-              </Link>
-            ) : (
-              <ItemCount
-                data={data.quantity}
-                onAdd={onAdd}
-                id={data.id}
-              ></ItemCount>
-            )} */}
           </div>
         </article>
       </div>

@@ -1,11 +1,9 @@
 //proveedor de cart
 import React, { createContext, useContext, useState } from "react";
 
-export const CartContext = createContext(null);
+export const CartContext = createContext();
 
-// export const useCartContext = () => {
-//   return useContext(CartContext);
-// };
+export const useCartContext = () => useContext(CartContext);
 
 const CartContextProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
@@ -29,9 +27,10 @@ const CartContextProvider = ({ children }) => {
   };
 
   const removeItem = (id) => {
+    const newCart = [...cart];
+
     let index = newCart.findIndex((el) => el.id === id);
 
-    const newCart = [...cart];
     newCart.splice(index, 1);
 
     setCart([...newCart]);
