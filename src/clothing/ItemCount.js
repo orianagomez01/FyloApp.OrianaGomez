@@ -33,7 +33,25 @@ const ItemCount = ({ initial, stock, onAdd }) => {
         </Button>
       </div>
 
-      <button
+      {showButton ? (
+        <Link to="/cart" id="{item.id}" className="product__btn">
+          Finalizar compra
+        </Link>
+      ) : (
+        <button
+          id="{item.id}"
+          className="product__btn"
+          onClick={() => {
+            onAdd(quantity);
+            setShowButton(true);
+          }}
+          disabled={stock === 0 ? true : null}
+        >
+          Añadir al carrito
+        </button>
+      )}
+
+      {/* <button
         id="{item.id}"
         className="product__btn"
         onClick={() => {
@@ -49,7 +67,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
         <Link to="/cart" id="{item.id}" className="product__btn">
           Finalizar compra
         </Link>
-      )}
+      )} */}
     </>
   );
 };

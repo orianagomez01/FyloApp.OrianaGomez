@@ -8,7 +8,7 @@ import ItemCount from "./ItemCount";
 
 const ItemDetail = (data) => {
   const cartContext = useContext(CartContext);
-  const { cart, addItem } = CartContext;
+  const { addItem } = CartContext;
 
   const onAdd = (quantity) => {
     addItem(data, quantity);
@@ -41,7 +41,11 @@ const ItemDetail = (data) => {
               <ToggleButton variant="outline-secondary">XXL</ToggleButton>
             </div>
 
-            <ItemCount stock={data.stock} initial={1} onAdd={onAdd}></ItemCount>
+            <ItemCount
+              stock={data.quantity}
+              initial={1}
+              onAdd={onAdd}
+            ></ItemCount>
 
             {/* // const onAdd = (count) => {
   //   setTerminar(true);

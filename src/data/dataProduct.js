@@ -7,7 +7,7 @@ export const productList = [
     tag: "Camisetas",
     size: ["XS", "S", "L"],
     picture: "catalogo__remeras.webp",
-    quantity: 1,
+    quantity: 6,
     category: "women",
   },
   {
@@ -18,7 +18,7 @@ export const productList = [
     tag: "Camisetas",
     size: ["XS", "S", "M", "XXL"],
     picture: "catalogo__remeras2.webp",
-    quantity: 1,
+    quantity: 7,
     category: "women",
   },
   {
@@ -29,7 +29,7 @@ export const productList = [
     tag: "Camisetas",
     size: ["XS", "M"],
     picture: "catalogo__remeras4.webp",
-    quantity: 1,
+    quantity: 4,
     category: "women",
   },
   {
@@ -40,7 +40,7 @@ export const productList = [
     tag: "Camisetas",
     size: ["S", "XXL"],
     picture: "catalogo__remeras5.webp",
-    quantity: 1,
+    quantity: 8,
     category: "women",
   },
   {
@@ -51,7 +51,7 @@ export const productList = [
     tag: "Camisetas",
     size: ["S", "XL"],
     picture: "catalogo__remeras6.webp",
-    quantity: 1,
+    quantity: 5,
     category: "women",
   },
   {
@@ -62,7 +62,7 @@ export const productList = [
     tag: "Jeans",
     size: ["S", "L", "XXL"],
     picture: "catalogo__jeans.webp",
-    quantity: 1,
+    quantity: 3,
     category: "women",
   },
   {
@@ -73,7 +73,7 @@ export const productList = [
     tag: "Jeans",
     size: ["XS", "M", "L", "XL"],
     picture: "catalogo__jeans2.webp",
-    quantity: 1,
+    quantity: 6,
     category: "women",
   },
   {
@@ -84,7 +84,7 @@ export const productList = [
     tag: "Jeans",
     size: ["XS", "S", "XL"],
     picture: "catalogo__jeans3.webp",
-    quantity: 1,
+    quantity: 4,
     category: "women",
   },
   {
@@ -95,7 +95,7 @@ export const productList = [
     tag: "Jeans",
     size: ["XS", "S", "M"],
     picture: "catalogo__jeans4.webp",
-    quantity: 1,
+    quantity: 3,
     category: "women",
   },
   {
@@ -106,7 +106,7 @@ export const productList = [
     tag: "Jeans",
     size: ["M", "L"],
     picture: "catalogo__jeans5.webp",
-    quantity: 1,
+    quantity: 2,
     category: "women",
   },
   {
@@ -117,7 +117,7 @@ export const productList = [
     tag: "Jeans",
     size: ["XS", "XL"],
     picture: "catalogo__jeans6.webp",
-    quantity: 1,
+    quantity: 9,
     category: "women",
   },
   {
@@ -128,7 +128,7 @@ export const productList = [
     tag: "Camisetas",
     size: ["S", "L"],
     picture: "catalogo__remeras7.webp",
-    quantity: 1,
+    quantity: 6,
     category: "women",
   },
   {
@@ -139,7 +139,7 @@ export const productList = [
     tag: "Buzos",
     size: ["XS", "S", "L"],
     picture: "catalogo__buzosh.webp",
-    quantity: 1,
+    quantity: 8,
     category: "men",
   },
   {
@@ -150,7 +150,7 @@ export const productList = [
     tag: "Camperas",
     size: ["XS", "S", "M", "XXL"],
     picture: "catalogo__camperas3.webp",
-    quantity: 1,
+    quantity: 5,
     category: "men",
   },
   {
@@ -161,7 +161,7 @@ export const productList = [
     tag: "Camperas",
     size: ["XS", "M"],
     picture: "catalogo__camperash1.webp",
-    quantity: 1,
+    quantity: 6,
     category: "men",
   },
   {
@@ -172,7 +172,7 @@ export const productList = [
     tag: "Pantalón",
     size: ["S", "XXL"],
     picture: "catalogo__pantalones3.webp",
-    quantity: 1,
+    quantity: 8,
     category: "men",
   },
   {
@@ -183,7 +183,7 @@ export const productList = [
     tag: "Pantalón",
     size: ["S", "XL"],
     picture: "catalogo__pantalonesh1.webp",
-    quantity: 1,
+    quantity: 4,
     category: "men",
   },
   {
@@ -194,7 +194,7 @@ export const productList = [
     tag: "Remeras",
     size: ["S", "L", "XXL"],
     picture: "catalogo__remerash.webp",
-    quantity: 1,
+    quantity: 6,
     category: "men",
   },
   {
@@ -205,7 +205,7 @@ export const productList = [
     tag: "Buzos",
     size: ["XS", "M", "L", "XL"],
     picture: "catalogo__buzosh4.webp",
-    quantity: 1,
+    quantity: 8,
     category: "men",
   },
   {
@@ -216,7 +216,7 @@ export const productList = [
     tag: "Buzos",
     size: ["XS", "S", "XL"],
     picture: "catalogo__buzosh6.webp",
-    quantity: 1,
+    quantity: 5,
     category: "men",
   },
   {
@@ -227,7 +227,7 @@ export const productList = [
     tag: "Jeans",
     size: ["XS", "S", "M"],
     picture: "catalogo__pantalonesh4.webp",
-    quantity: 1,
+    quantity: 3,
     category: "men",
   },
   {
@@ -238,7 +238,7 @@ export const productList = [
     tag: "Remeras",
     size: ["M", "L"],
     picture: "catalogo__remerash2.webp",
-    quantity: 1,
+    quantity: 4,
     category: "men",
   },
   {
@@ -249,7 +249,7 @@ export const productList = [
     tag: "Remeras",
     size: ["XS", "XL"],
     picture: "catalogo__remerash5.webp",
-    quantity: 1,
+    quantity: 7,
     category: "men",
   },
   {
@@ -260,7 +260,7 @@ export const productList = [
     tag: "Pantalón",
     size: ["S", "L"],
     picture: "catalogo__pantalonesh7.webp",
-    quantity: 1,
+    quantity: 6,
     category: "men",
   },
 ];
