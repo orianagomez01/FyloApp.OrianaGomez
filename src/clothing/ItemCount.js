@@ -1,15 +1,13 @@
 import React from "react";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const ItemCount = ({ initial, data, onAdd }) => {
   const [qty, setQuantity] = useState(initial);
 
-  const [showButton, setShowButton] = useState(false);
-
   const addProduct = (num) => {
-    setShowButton(true);
+    // setShowButton(true);
     setQuantity(qty + num);
   };
 
@@ -34,22 +32,16 @@ const ItemCount = ({ initial, data, onAdd }) => {
         </Button>
       </div>
 
-      {showButton ? (
-        <Link to="/cart" id="{item.id}" className="product__btn">
-          Finalizar compra
-        </Link>
-      ) : (
-        <button
-          id="{item.id}"
-          className="product__btn"
-          onClick={() => {
-            onAdd(qty);
-          }}
-          disabled={data.quantity === 0 ? true : null}
-        >
-          Añadir al carrito
-        </button>
-      )}
+      <button
+        id="{item.id}"
+        className="product__btn"
+        onClick={() => {
+          onAdd(qty);
+        }}
+        disabled={data.quantity === 0 ? true : null}
+      >
+        Añadir al carrito
+      </button>
     </>
   );
 };

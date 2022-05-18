@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import ToggleButton from "react-bootstrap/ToggleButton";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useCartContext } from "../context/CartContext";
-
 import ItemCount from "./ItemCount";
+import { Link } from "react-router-dom";
 
 const ItemDetail = (data) => {
-  const { addItem } = useCartContext;
+  const { addItem } = useCartContext();
+
+  const [showButton, setShowButton] = useState(false);
 
   function onAdd(quantity) {
-    console.log("cantidad en carrito" + quantity);
     addItem(data, quantity);
+    setShowButton(true);
+    console.log("cantidad en carrito" + quantity);
   }
 
   return (
@@ -40,11 +43,18 @@ const ItemDetail = (data) => {
               <ToggleButton variant="outline-secondary">XXL</ToggleButton>
             </div>
 
-            <ItemCount
-              data={data.quantity}
-              initial={1}
-              onAdd={onAdd}
-            ></ItemCount>
+            {showButton ? (
+              <Link to="/cart" id="{data.id}" className="product__btn">
+                Finalizar compra
+              </Link>
+            ) : (
+              <ItemCount
+                data={data.quantity}
+                initial={1}
+                onAdd={onAdd}
+                id={data.id}
+              ></ItemCount>
+            )}
           </div>
         </article>
       </div>
