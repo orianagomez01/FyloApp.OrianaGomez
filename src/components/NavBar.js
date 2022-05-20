@@ -14,9 +14,11 @@ const NavBar = () => {
   return (
     <header className="fylo">
       <nav className="nav container-page">
-        <figure className="nav__logo">
-          <img src={logo} className="nav__img" alt="Logo" />
-        </figure>
+        <NavLink to="/">
+          <figure className="nav__logo">
+            <img src={logo} className="nav__img" alt="Logo" />
+          </figure>
+        </NavLink>
         {categories.map((nav) => {
           return (
             <div className="nav__links--items" key={nav.id}>
