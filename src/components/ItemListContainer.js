@@ -1,6 +1,8 @@
 import React from "react";
 import ItemList from "./ItemList";
 import { useEffect, useState } from "react";
+import ItemCollection from "../shop/ItemCollection";
+
 import { productList } from "../data/dataProduct";
 // import { Link } from "react-router-dom";
 
@@ -33,6 +35,10 @@ const ItemListContainer = (props) => {
       });
 
     console.log("Se terminó el efecto");
+
+    // ItemCollection.then((promise) => {
+    //   setProduct(promise);
+    // });
   }, [productId]);
 
   return (

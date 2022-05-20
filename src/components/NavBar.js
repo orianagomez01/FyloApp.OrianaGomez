@@ -2,6 +2,7 @@ import React from "react";
 
 import logo from "../assets/logo.svg";
 import { NavLink } from "react-router-dom";
+import CartWidget from "./CartWidget";
 
 const NavBar = () => {
   const categories = [
@@ -26,6 +27,9 @@ const NavBar = () => {
             </div>
           );
         })}
+        <NavLink to="/" className="nav__link">
+          <CartWidget></CartWidget>
+        </NavLink>
       </nav>
       <div className="line"></div>
     </header>
