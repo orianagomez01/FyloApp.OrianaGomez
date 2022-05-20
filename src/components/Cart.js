@@ -68,15 +68,15 @@ const Cart = () => {
 
   return (
     <>
-      {cart === 0 ? (
-        <h1>aaaaaaaaaa</h1>
+      {cart.length === 0 ? (
+        <div class="text-center">
+          <p>No hay productos seleccionados</p>
+          <Link to="/">
+            <Button>Volver al inicio</Button>
+          </Link>
+        </div>
       ) : (
-        // <div>
-        //   <p>No hay productos seleccionados</p>
-        //   <Link to="/">
-        //     <Button>Volver al inicio</Button>
-        //   </Link>
-        // </div>
+        // <h1>aaaaaaaaaa</h1>
         <>
           <div>
             {cart.map((item) => {
