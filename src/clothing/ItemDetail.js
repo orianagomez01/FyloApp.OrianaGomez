@@ -44,7 +44,7 @@ const ItemDetail = (data) => {
             </div>
 
             {showButton ? (
-              <Link to="/cart" id="{data.id}" className="product__btn">
+              <Link to="/cart" id="{data.id}" className="item__btn">
                 Finalizar compra
               </Link>
             ) : (

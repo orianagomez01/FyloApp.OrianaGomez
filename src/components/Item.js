@@ -14,11 +14,12 @@ const Item = ({ products }) => {
                 alt="Imagen del producto"
               />
             </figure>
-
             <div className="product__texts">
               <h2 className="product__title">{products.title}</h2>
               <p className="product__paragraph">{products.description}</p>
               <p className="product__price">${products.price}</p>
+            </div>{" "}
+            <div className="product__buttons container">
               <Link to={`/items/${products.id}`}>
                 <button id="{products.id}" className="product__btn">
                   Ver producto

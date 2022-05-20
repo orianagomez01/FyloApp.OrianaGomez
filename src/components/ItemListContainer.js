@@ -7,13 +7,16 @@ import { productList } from "../data/dataProduct";
 // import { Link } from "react-router-dom";
 
 import { useParams } from "react-router-dom";
+import { Spinner } from "react-bootstrap";
 
 const ItemListContainer = (props) => {
   const [product, setProduct] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const { productId } = useParams();
 
   useEffect(() => {
+    setLoading(true);
     const getProducts = new Promise((resolve, reject) => {
       setTimeout(() => {
         const myData = productId
@@ -32,7 +35,8 @@ const ItemListContainer = (props) => {
       })
       .catch((err) => {
         console.log("hubo un error", err);
-      });
+      })
+      .finally(() => setLoading(false));
 
     console.log("Se terminó el efecto");
 
@@ -41,7 +45,11 @@ const ItemListContainer = (props) => {
     // });
   }, [productId]);
 
-  return (
+  return loading ? (
+    <Spinner animation="border" role="status">
+      <span className="visually-hidden">Loading...</span>
+    </Spinner>
+  ) : (
     <>
       <div className="greeting">
         <h1 className="greeting__text">Bienvenidx {props.name}</h1>

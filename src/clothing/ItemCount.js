@@ -33,8 +33,8 @@ const ItemCount = ({ initial, data, onAdd }) => {
       </div>
 
       <button
-        id="{item.id}"
-        className="product__btn"
+        id={data.id}
+        className="item__btn"
         onClick={() => {
           onAdd(qty);
         }}

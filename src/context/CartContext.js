@@ -40,45 +40,16 @@ const CartContextProvider = ({ children }) => {
     setCart([]);
   };
 
-  // const isInCart = (id) => cart.find((producto) => producto.id === id);
-
-  // const newCart = [...cart];
-
-  // const addItem = (item, quantity) => {
-  //   //carrito nuevo para no borrar los datos del anterior -- con los ... pasamos la info / datos de carrito para sumarle info nuevo y q no sean 2 arrays distintos
-
-  //   const itemIsInCart = isInCart(item.id);
-
-  //   if (itemIsInCart) {
-  //     newCart(
-  //       (newCart.findIndex(
-  //         (product) => product.id === itemIsInCart.id
-  //       ).quantity += quantity)
-  //     );
-  //     setCart(newCart);
-  //     return;
-  //   }
-
-  //   item.quantity = quantity;
-  //   setCart([...newCart, item]);
-  // };
-
-  // const removeItem = (item) => {
-  //   const itemIsInCart = isInCart(item.id);
-
-  //   if (!itemIsInCart) {
-  //     return;
-  //   }
-
-  //   const removeCart = newCart.filter((product) => product.id !== item.id);
-
-  //   setCart(removeCart);
-  // };
-
-  // const clear = () => setCart([]);
+  const total = () => {
+    let total = 0;
+    cart.forEach((item) => (total += item.quantity));
+    return total;
+  };
 
   return (
-    <CartContext.Provider value={{ cart, addItem, setCart, clear, removeItem }}>
+    <CartContext.Provider
+      value={{ cart, addItem, setCart, clear, removeItem, total }}
+    >
       {children}
     </CartContext.Provider>
   );
