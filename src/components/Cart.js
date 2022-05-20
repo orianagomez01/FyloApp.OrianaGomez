@@ -36,11 +36,11 @@ const Cart = () => {
       </Modal.Dialog>
     );
   } else {
-    {
-      cart.map((data) => {
+    <section id="carrito">
+      {cart.map((data) => {
         return (
           <>
-            <section id="carrito">
+            <div key={data.id}>
               <Modal.Dialog>
                 <Modal.Header closeButton>
                   <Modal.Title className="modal-header">
@@ -49,34 +49,32 @@ const Cart = () => {
                 </Modal.Header>
 
                 <Modal.Body className="modal-body">
-                  <div key={data.id}>
-                    <img
-                      className="modal__img"
-                      src={require(`../assets/${data.picture}`)}
-                      alt="Imagen del producto seleccionado"
-                    />
-                    <div className="modal__texts">
-                      <h3 className="modal__title"> {data.title}</h3>
-                      <p className="modal__paragraph">
-                        ${data.price} X ${data.quantity}{" "}
-                        {/* <span className="modal__paragraph--bold">
+                  <img
+                    className="modal__img"
+                    src={require(`../assets/${data.picture}`)}
+                    alt="Imagen del producto seleccionado"
+                  />
+                  <div className="modal__texts">
+                    <h3 className="modal__title"> {data.title}</h3>
+                    <p className="modal__paragraph">
+                      ${data.price} X ${data.quantity}{" "}
+                      {/* <span className="modal__paragraph--bold">
                 {" "}
                 $${producto.subTotal()}
               </span>{" "} */}
-                      </p>
-                    </div>
-                    <button
-                      onClick={() => removeItem()}
-                      className="modal__icon"
-                      id="${data.id}"
-                    >
-                      <img
-                        className="modal__icon--img"
-                        src={`../assets/bxs-trash.svg`}
-                        alt="Icono de tacho de basura"
-                      />
-                    </button>
+                    </p>
                   </div>
+                  <button
+                    onClick={() => removeItem()}
+                    className="modal__icon"
+                    id={data.id}
+                  >
+                    <img
+                      className="modal__icon--img"
+                      src={`../assets/bxs-trash.svg`}
+                      alt="Icono de tacho de basura"
+                    />
+                  </button>
                 </Modal.Body>
 
                 <Modal.Footer>
@@ -87,11 +85,11 @@ const Cart = () => {
                   <Button variant="primary">Confirmar</Button>
                 </Modal.Footer>
               </Modal.Dialog>
-            </section>
+            </div>
           </>
         );
-      });
-    }
+      })}
+    </section>;
   }
 };
 
