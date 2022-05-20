@@ -37,17 +37,14 @@ const Cart = () => {
     );
   } else {
     <section id="carrito">
-      {cart.map((data) => {
-        return (
-          <>
-            <div key={data.id}>
-              <Modal.Dialog>
-                <Modal.Header closeButton>
-                  <Modal.Title className="modal-header">
-                    Carrito de compras
-                  </Modal.Title>
-                </Modal.Header>
-
+      <Modal.Dialog>
+        <Modal.Header closeButton>
+          <Modal.Title className="modal-header">Carrito de compras</Modal.Title>
+        </Modal.Header>
+        {cart.map((data) => {
+          return (
+            <>
+              <div key={data.id}>
                 <Modal.Body className="modal-body">
                   <img
                     className="modal__img"
@@ -84,11 +81,11 @@ const Cart = () => {
                   </Button>
                   <Button variant="primary">Confirmar</Button>
                 </Modal.Footer>
-              </Modal.Dialog>
-            </div>
-          </>
-        );
-      })}
+              </div>
+            </>
+          );
+        })}
+      </Modal.Dialog>
     </section>;
   }
 };
