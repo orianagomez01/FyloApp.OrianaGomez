@@ -10,7 +10,7 @@ const CartWidget = () => {
 
   return (
     <div className="btnCart" id="btnCart">
-      <Link to="/">
+      <Link to="/cart">
         <Badge id="cantidad" pill bg="success">
           {numTotal}
         </Badge>{" "}

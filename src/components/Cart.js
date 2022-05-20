@@ -1,16 +1,13 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, Modal } from "react-bootstrap";
+// import { Button } from "react-bootstrap";
 import { useCartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
-import Table from "react-bootstrap/Table";
 import CartItem from "./CartItem";
+import { Button } from "react-bootstrap";
+
 const Cart = () => {
-  const { removeItem, clear, cart } = useCartContext();
-
-  // const mapeoCart = cart.map ((data) => {
-
-  // })
+  const { cart } = useCartContext();
 
   //   if (itemsInCart.length === 0) {
   //     return (
@@ -72,21 +69,25 @@ const Cart = () => {
   return (
     <>
       {cart === 0 ? (
-        <h1>aaaaa</h1>
+        <h1>aaaaaaaaaa</h1>
       ) : (
-        <div>
-          {cart.map((item) => {
-            return <CartItem key={item.id} item={item}></CartItem>;
-          })}
-        </div>
-      )}{" "}
+        // <div>
+        //   <p>No hay productos seleccionados</p>
+        //   <Link to="/">
+        //     <Button>Volver al inicio</Button>
+        //   </Link>
+        // </div>
+        <>
+          <div>
+            {cart.map((item) => {
+              return <CartItem key={item.id} item={item}></CartItem>;
+            })}
+          </div>
+        </>
+      )}
     </>
   );
 };
-
-{
-  /* if (cart.length === 0) { */
-}
 
 {
   /* //   return (
@@ -109,67 +110,6 @@ const Cart = () => {
   //     </Modal.Dialog>
   //   );
   // } else { */
-}
-{
-  /* //   <section id="carrito">
-  //     <Modal.Dialog>
-  //       <Modal.Header closeButton>
-  //         <Modal.Title className="modal-header">Carrito de compras</Modal.Title>
-  //       </Modal.Header>
-  //       {cart.map((data) => { */
-}
-{
-  /* //         return (
-  //           // <>
-  //           <div key={data.id}>
-  //             <Modal.Body className="modal-body">
-  //               <img */
-}
-{
-  /* //                 className="modal__img"
-  //                 src={require(`../assets/${data.picture}`)}
-  //                 alt="Imagen del producto seleccionado"
-  //               />
-  //               <div className="modal__texts">
-  //                 <h3 className="modal__title"> {data.title}</h3>
-  //                 <p className="modal__paragraph">
-  //                   ${data.price} X ${data.quantity}{" "}
-  //                   {/* <span className="modal__paragraph--bold">
-  //                 {" "}
-  //                 $${producto.subTotal()}
-  //               </span>{" "} */
-}
-//                 </p>
-//               </div>
-//               <button */}
-//                 onClick={() => removeItem()}
-//                 className="modal__icon"
-//                 id={data.id}
-//               >
-//                 <img
-//                   className="modal__icon--img"
-//                   src={`../assets/bxs-trash.svg`}
-//                   alt="Icono de tacho de basura"
-//                 />
-//               </button>
-//             </Modal.Body>
-//             <Modal.Footer>
-//               <p id="totalCarrito">Total: ${data.quantity * data.price}</p>
-//               <Button onClick={() => clear()} variant="secondary">
-//                 Vaciar Carrito
-//               </Button>
-//               <Button variant="primary">Confirmar</Button>
-//             </Modal.Footer>
-//           </div>
-
-//           // </>
-//         );
-//       })}
-//     </Modal.Dialog>
-//   </section>;
-// }
-{
-  /* }; */
 }
 
 export default Cart;
