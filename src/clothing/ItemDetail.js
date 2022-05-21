@@ -23,7 +23,8 @@ const ItemDetail = (data) => {
           <div className="item__content">
             <figure className="item__picture">
               <img
-                src={require(`../assets/${data.picture}`)}
+                // {require(`../assets/${data.picture}`)}
+                src={data.picture}
                 className="item__img"
                 alt={`${data.id}-${data.title}`}
               />

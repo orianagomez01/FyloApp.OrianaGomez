@@ -69,10 +69,10 @@ const Cart = () => {
   return (
     <>
       {cart.length === 0 ? (
-        <div class="text-center">
+        <div className="text-center">
           <p>No hay productos seleccionados</p>
           <Link to="/">
-            <Button>Volver al inicio</Button>
+            <Button variant="success">Volver al inicio</Button>
           </Link>
         </div>
       ) : (
@@ -88,28 +88,5 @@ const Cart = () => {
     </>
   );
 };
-
-{
-  /* //   return (
-  //     <Modal.Dialog>
-  //       <Modal.Header closeButton>
-  //         <Modal.Title className="modal-header">Carrito de compras</Modal.Title>
-  //       </Modal.Header>
-
-  //       <Modal.Body className="modal-body">
-  //         <div className="modal__texts">
-  //           <p className="modal__paragraph">No hay productos seleccionados</p>
-  //         </div>
-  //       </Modal.Body>
-
-  //       <Modal.Footer>
-  //         <Link to={`/`}>
-  //           <Button variant="primary">Volver al inicio</Button>
-  //         </Link>
-  //       </Modal.Footer>
-  //     </Modal.Dialog>
-  //   );
-  // } else { */
-}
 
 export default Cart;

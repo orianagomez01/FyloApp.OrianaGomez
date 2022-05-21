@@ -3,18 +3,6 @@ import ReactDOM from "react-dom/client";
 import "./index.scss";
 import App from "./App";
 // import reportWebVitals from "./reportWebVitals";
-import { initializeApp } from "firebase/app";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyA4oobcFBsOwrkjgIMXbM9tzReRp9v7zmM",
-  authDomain: "fylo-app-f1d8a.firebaseapp.com",
-  projectId: "fylo-app-f1d8a",
-  storageBucket: "fylo-app-f1d8a.appspot.com",
-  messagingSenderId: "560541733453",
-  appId: "1:560541733453:web:adfac2cb750fb8afcd8204",
-};
-
-const app = initializeApp(firebaseConfig);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
