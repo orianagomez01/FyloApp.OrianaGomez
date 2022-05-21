@@ -1,10 +1,7 @@
 import React from "react";
 import ItemList from "./ItemList";
 import { useEffect, useState } from "react";
-import {
-  getAllItems as getItemByCategory,
-  getItem,
-} from "../firebase/ItemCollection";
+import { getAllItems, getItemByCategory } from "../firebase/ItemCollection";
 
 // import { productList } from "../data/dataProduct";
 import { useParams } from "react-router-dom";
@@ -20,7 +17,7 @@ const ItemListContainer = (props) => {
     setLoading(true);
 
     if (productId === undefined) {
-      getItem()
+      getAllItems()
         .then((res) => {
           setProduct(res);
         })

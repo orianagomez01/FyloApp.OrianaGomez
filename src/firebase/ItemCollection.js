@@ -23,6 +23,7 @@ const db = getFirestore(app);
 
 export default db;
 
+//TODOS LOS ITEMS
 export async function getAllItems() {
   const myCollection = collection(db, "items");
 
@@ -37,16 +38,17 @@ export async function getAllItems() {
 }
 
 //CATEGORIAS
-export async function getItemByCategory(categoryId) {
+
+export async function getItemByCategory(productId) {
   const myCollection = collection(db, "items");
-  const q = query(myCollection, where("category", "==", categoryId));
+  const q = query(myCollection, where("category", "==", productId));
 
   const snapData = await getDocs(q);
 
   return snapData.docs.map((doc) => {
     return {
-      ...doc.data(),
       id: doc.id,
+      ...doc.data(),
     };
   });
 }

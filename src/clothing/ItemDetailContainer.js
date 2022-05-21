@@ -25,22 +25,6 @@ const ItemDetailContainer = () => {
     console.log("termina el efecto de itemDetail");
   }, [itemId]);
 
-  // useEffect(() => {
-  //   const getItems = new Promise((resolve) => {
-  //     setTimeout(() => {
-  //       const findData = productList.find((item) => item.id === itemId);
-
-  //       resolve(findData);
-  //     }, 1000);
-  //   });
-
-  //   getItems
-  //     .then((res) => {
-  //       setItem(res);
-  //     })
-  //     .finally(() => setLoading(false));
-  // }, [itemId]);
-
   return loading ? (
     <Spinner animation="border" role="status">
       <span className="visually-hidden">Loading...</span>
