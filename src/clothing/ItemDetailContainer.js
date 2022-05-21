@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 // data
-import { productList } from "../data/dataProduct";
-import { getItem as getEachItem } from "../firebase/ItemCollection";
+import { getItem } from "../firebase/ItemCollection";
 
 // item details
 import ItemDetail from "./ItemDetail";
@@ -17,7 +16,7 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     setLoading(true);
 
-    getEachItem(itemId)
+    getItem(itemId)
       .then((res) => {
         setItem(res);
       })
