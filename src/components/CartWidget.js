@@ -5,8 +5,8 @@ import carritoIcono from "../assets/bx-cart.svg";
 import { useCartContext } from "../context/CartContext";
 
 const CartWidget = () => {
-  const { total } = useCartContext();
-  const numTotal = total();
+  const { cartLength } = useCartContext();
+  const numTotal = cartLength();
 
   return (
     <div className="btnCart" id="btnCart">

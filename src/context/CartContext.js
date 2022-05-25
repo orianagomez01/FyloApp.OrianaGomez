@@ -40,21 +40,55 @@ const CartContextProvider = ({ children }) => {
     setCart([]);
   };
 
-  const total = () => {
-    let total = 0;
-    cart.forEach((item) => (total += item.quantity));
-    return total;
+  // Obtener número total de items
+  const cartLength = () => {
+    let qty = 0;
+    cart.forEach((item) => {
+      qty = qty + item.quantity;
+    });
+    return qty;
   };
 
-  const precioTotal = () => {
-    let pTotal = 0;
-    cart.forEach((element) => (pTotal += element.price * element.quantity));
-    return pTotal;
+  // Obtener el subtotal
+  const getSubtotal = (price, quantity) => {
+    let subtotal = 0;
+    subtotal = subtotal + price * quantity;
+    return Number(subtotal);
   };
+
+  // Obtener el total
+  const getTotal = () => {
+    let total = 0;
+    cart.forEach((item) => {
+      total = total + item.quantity * item.price;
+    });
+    return Number(total);
+  };
+
+  // const total = () => {
+  //   let total = 0;
+  //   cart.forEach((item) => (total += item.quantity));
+  //   return total;
+  // };
+
+  // const precioTotal = () => {
+  //   let pTotal = 0;
+  //   cart.forEach((element) => (pTotal += element.price * element.quantity));
+  //   return pTotal;
+  // };
 
   return (
     <CartContext.Provider
-      value={{ cart, addItem, setCart, clear, removeItem, total, precioTotal }}
+      value={{
+        cart,
+        addItem,
+        setCart,
+        clear,
+        removeItem,
+        cartLength,
+        getTotal,
+        getSubtotal,
+      }}
     >
       {children}
     </CartContext.Provider>
