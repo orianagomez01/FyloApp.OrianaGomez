@@ -52,3 +52,37 @@
 .modal__paragraph--bold {
     font-weight: 700;
 }
+
+.cart__container {
+    margin-top: 3em;
+}
+
+.cartItem__container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3% 0;
+    overflow: hidden;
+}
+
+.cartItem__title {
+    font-size: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #222;
+}
+
+.cartItem_paragraph {
+    display: contents;
+}
+
+.cartItem__row {
+    align-items: center;
+}
+
+.cartItem__content {
+    margin-top: 0.8em !important;
+}
+
+.cartItem__img {
+    width: 30%;
+}

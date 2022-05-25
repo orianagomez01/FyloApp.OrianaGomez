@@ -2,8 +2,6 @@ import React from "react";
 import ItemList from "./ItemList";
 import { useEffect, useState } from "react";
 import { getAllItems, getItemByCategory } from "../firebase/ItemCollection";
-
-// import { productList } from "../data/dataProduct";
 import { useParams } from "react-router-dom";
 import { Spinner } from "react-bootstrap";
 
@@ -30,36 +28,6 @@ const ItemListContainer = (props) => {
         .finally(() => setLoading(false));
     }
   }, [productId]);
-
-  // useEffect(() => {
-  //   setLoading(true);
-  //   const getProducts = new Promise((resolve, reject) => {
-  //     setTimeout(() => {
-  //       const myData = productId
-  //         ? productList.filter((item) => item.category === productId)
-  //         : productList;
-
-  //       resolve(myData);
-  //       // reject('error en la promesa')
-  //     }, 2000);
-  //   });
-
-  //   getProducts
-  //     .then((result) => {
-  //       console.log("Se completó la promesa", result);
-  //       setProduct(result);
-  //     })
-  //     .catch((err) => {
-  //       console.log("hubo un error", err);
-  //     })
-  //     .finally(() => setLoading(false));
-
-  //   console.log("Se terminó el efecto");
-
-  //   // ItemCollection.then((promise) => {
-  //   //   setProduct(promise);
-  //   // });
-  // }, [productId]);
 
   return loading ? (
     <Spinner animation="border" role="status">

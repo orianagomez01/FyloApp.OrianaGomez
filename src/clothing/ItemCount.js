@@ -1,13 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
-// import { Link } from "react-router-dom";
 
 const ItemCount = ({ initial, data, onAdd }) => {
   const [qty, setQuantity] = useState(initial);
 
   const addProduct = (num) => {
-    // setShowButton(true);
     setQuantity(qty + num);
   };
 
