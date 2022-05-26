@@ -61,7 +61,7 @@
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 3% 0;
+    padding: 1.2% 0;
     overflow: hidden;
 }
 
@@ -73,7 +73,7 @@
 
 .cartItem_paragraph {
     display: contents;
-    margin-right: 4em;
+    padding-right: 2em;
 }
 
 .cartItem__row {
@@ -132,4 +132,8 @@
 .cartItem__description--buttons {
     display: flex;
     gap: 1em;
+}
+
+#container--items {
+    width: 100%;
 }
