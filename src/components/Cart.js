@@ -54,9 +54,12 @@ const Cart = () => {
                 <Button onClick={() => clear()} variant="danger">
                   Borrar Todo
                 </Button>
-                <Button onClick={() => clear()} variant="success">
-                  Siguiente
-                </Button>
+                <Link to="/checkout">
+                  <Button onClick={() => clear()} variant="success">
+                    {" "}
+                    Siguiente
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

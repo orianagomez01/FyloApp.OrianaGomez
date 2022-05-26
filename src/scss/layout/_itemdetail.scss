@@ -52,3 +52,13 @@
 .item__quantity {
     align-items: center;
 }
+
+.item__btn {
+    background-color: var(--green-color);
+    color: var(--white-goingtogrey-color);
+    font-family: var(--body-font);
+    border: var(--green-color) solid 1px;
+    text-align: center;
+    padding: 2% 3%;
+
+}
