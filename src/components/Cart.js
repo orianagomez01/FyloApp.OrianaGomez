@@ -55,10 +55,7 @@ const Cart = () => {
                   Borrar Todo
                 </Button>
                 <Link to="/checkout">
-                  <Button onClick={() => clear()} variant="success">
-                    {" "}
-                    Siguiente
-                  </Button>
+                  <Button variant="success"> Siguiente</Button>
                 </Link>
               </div>
             </div>

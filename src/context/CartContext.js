@@ -65,18 +65,6 @@ const CartContextProvider = ({ children }) => {
     return Number(total);
   };
 
-  // const total = () => {
-  //   let total = 0;
-  //   cart.forEach((item) => (total += item.quantity));
-  //   return total;
-  // };
-
-  // const precioTotal = () => {
-  //   let pTotal = 0;
-  //   cart.forEach((element) => (pTotal += element.price * element.quantity));
-  //   return pTotal;
-  // };
-
   return (
     <CartContext.Provider
       value={{
