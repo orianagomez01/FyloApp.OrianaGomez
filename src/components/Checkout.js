@@ -90,6 +90,7 @@ const Checkout = () => {
               id="nombre"
               type="text"
               name="nombre"
+              value={buyer.nombre}
               required
               onChange={submitOnChange}
               placeholder="Nombre"
@@ -99,6 +100,7 @@ const Checkout = () => {
               id="apellido"
               type="text"
               name="apellido"
+              value={buyer.apellido}
               required
               onChange={submitOnChange}
               placeholder="Apellido"
@@ -108,6 +110,7 @@ const Checkout = () => {
               id="edad"
               type="text"
               name="edad"
+              value={buyer.edad}
               required
               onChange={submitOnChange}
               placeholder="Edad"
@@ -117,6 +120,7 @@ const Checkout = () => {
               id="telefono"
               type="phone"
               name="telefono"
+              value={buyer.telefono}
               required
               onChange={submitOnChange}
               placeholder="Teléfono (xxxxxxxxx)"
@@ -126,25 +130,26 @@ const Checkout = () => {
               id="email"
               type="email"
               name="email"
+              value={buyer.email}
               required
               onChange={submitOnChange}
               placeholder="E-mail"
             />
             <input
-              className="checkout__input "
-              id="emailConfirm"
+              className="checkout__input"
+              id="confirmEmail"
               type="email"
-              name="emailConfirm"
+              name="confirmEmail"
+              value={buyer.confirmEmail}
               required
               onChange={submitOnChange}
               placeholder="Confirmar e-mail"
             />
           </form>
-
           <button
             className="checkout__btn"
             disabled={validateForm()}
-            value="Proceder al pago"
+            value="Realizar Compra"
             onClick={() => {
               orderHandler();
               handleShow();
