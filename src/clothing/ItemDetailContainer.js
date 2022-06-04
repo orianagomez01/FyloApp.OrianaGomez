@@ -18,13 +18,11 @@ const ItemDetailContainer = () => {
         setItem(res);
       })
       .finally(() => setLoading(false));
-
-    console.log("termina el efecto de itemDetail");
   }, [itemId]);
 
   return loading ? (
     <Spinner animation="border" role="status">
-      <span className="visually-hidden">Loading...</span>
+      <span className="visually-hidden align-items-center">Loading...</span>
     </Spinner>
   ) : (
     <ItemDetail {...items} />

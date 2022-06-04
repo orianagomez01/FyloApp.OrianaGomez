@@ -10,12 +10,6 @@ import {
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  // apiKey: "AIzaSyA4oobcFBsOwrkjgIMXbM9tzReRp9v7zmM",
-  // authDomain: "fylo-app-f1d8a.firebaseapp.com",
-  // projectId: "fylo-app-f1d8a",
-  // storageBucket: "fylo-app-f1d8a.appspot.com",
-  // messagingSenderId: "560541733453",
-  // appId: "1:560541733453:web:adfac2cb750fb8afcd8204",
   apiKey: process.env.REACT_APP_APIKEY,
   authDomain: process.env.REACT_APP_AUTHDOMAIN,
   projectId: process.env.REACT_APP_PROJECTID,

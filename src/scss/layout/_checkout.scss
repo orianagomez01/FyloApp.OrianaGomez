@@ -9,68 +9,56 @@
 .checkout {
     display: flex;
     gap: 10em;
-}
 
-.checkout__title {
-    font-size: 2em;
-}
+    &__title {
+        font-size: 2em;
+    }
 
-.checkout__description {
-    border: solid 2px #222;
-    padding: 6%;
-    // max-width: 800px;
-    width: 130%;
-}
+    &__description {
+        border: solid 2px #222;
+        padding: 6%;
+        width: 130%;
+    }
 
-.checkout__cart {
-    display: flex;
-    flex-direction: row-reverse;
-}
+    &__cart {
+        display: flex;
+        flex-direction: row-reverse;
+    }
 
-.checkout_row {
-    display: flex;
-    justify-content: space-between;
-    gap: 8em;
-}
+    &_row {
+        display: flex;
+        justify-content: space-between;
+        gap: 8em;
+    }
 
-.checkout__input {
-    width: 50%;
-    padding: 1%;
-    font-weight: 300;
-    margin-bottom: 1em; // margin-left: 4%;
-}
+    &__input {
+        width: 60%;
+        padding: 1%;
+        font-weight: 300;
+        margin-bottom: 1em;
+    }
 
-.checkout__paragraphs {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
-}
+    &__paragraphs {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+    }
 
-.checkout__paragraph {
-    font-family: 'Open Sans', sans-serif;
-    margin-right: -10px;
-}
+    &__paragraph {
+        font-family: 'Open Sans', sans-serif;
+        margin-right: -10px;
+    }
 
-.checkout__content--two {
-    width: 60%;
-}
+    &__content--two {
+        width: 60%;
+    }
 
-.checkout__btn {
-    background-color: var(--green-color);
-    color: var(--white-goingtogrey-color);
-    font-family: var(--body-font);
-    border: var(--green-color) solid 1px;
-    text-align: center;
-    padding: 1% 16%;
-}
-
-.checkout__final {
-    background-color: #004526;
-}
-
-.flex {
-    display: flex;
-}
-
-.hidden {
-    display: none;
+    &__btn {
+        width: 60%;
+        background-color: var(--green-color);
+        color: var(--white-goingtogrey-color);
+        font-family: var(--body-font);
+        border: var(--green-color) solid 1px;
+        text-align: center;
+        padding: 1% 6%;
+    }
 }

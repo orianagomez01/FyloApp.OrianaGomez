@@ -13,7 +13,6 @@ const ItemDetail = (data) => {
   function onAdd(quantity) {
     addItem(data, quantity);
     setShowButton(true);
-    console.log("cantidad en carrito" + quantity);
   }
 
   return (

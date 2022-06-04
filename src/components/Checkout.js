@@ -1,7 +1,6 @@
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import React, { useState } from "react";
 import { useCartContext } from "../context/CartContext";
-import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import { Button, Modal } from "react-bootstrap";
 
@@ -19,7 +18,7 @@ const Checkout = () => {
     edad: "",
     telefono: "",
     email: "",
-    emailConfirm: "",
+    confirmEmail: "",
   });
 
   const dateOrder = new Date().toLocaleDateString();
@@ -39,8 +38,7 @@ const Checkout = () => {
     const orderCollection = collection(db, "orders");
 
     addDoc(orderCollection, order).then((response) => {
-      setOrderId(response);
-      console.log(response);
+      setOrderId(response.id);
     });
   };
 
@@ -86,9 +84,6 @@ const Checkout = () => {
         </div>
         <div className="checkout__content--two">
           <h2 className="checkout__title">Detalles de facturación</h2>
-          {/* {Object.keys(buyer).map((key) => {
-            return (
-              <div key={key}> */}
           <form>
             <input
               className="checkout__input"
@@ -120,7 +115,7 @@ const Checkout = () => {
             <input
               className="checkout__input "
               id="telefono"
-              type="tel"
+              type="phone"
               name="telefono"
               required
               onChange={submitOnChange}
@@ -144,34 +139,22 @@ const Checkout = () => {
               onChange={submitOnChange}
               placeholder="Confirmar e-mail"
             />
-
-            {/* <input
-                    className="checkout__input"
-                    placeholder={key}
-                    name={key}
-                    value={buyer[key]}
-                    type="text"
-                    required
-                    onChange={submitOnChange}
-                  /> */}
           </form>
+
+          <button
+            className="checkout__btn"
+            disabled={validateForm()}
+            value="Proceder al pago"
+            onClick={() => {
+              orderHandler();
+              handleShow();
+            }}
+          >
+            Realizar compra{" "}
+          </button>
         </div>
-        {/* );
-          })} */}
-        <button
-          className="checkout__btn"
-          disabled={validateForm()}
-          onClick={() => {
-            orderHandler();
-            handleShow();
-          }}
-        >
-          Realizar compra{" "}
-        </button>
       </div>
-      {/* </div> */}
-      {/* {Object.keys(buyer).map((key) => {
-        return ( */}
+
       <Modal show={final} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>¡Tu orden fue confirmada!</Modal.Title>
@@ -183,25 +166,22 @@ const Checkout = () => {
         <Modal.Footer>
           <Link to="/">
             {" "}
-            <Button variant="success" onClick={handleClose}>
+            <Button
+              type="submit"
+              variant="success"
+              onClick={() => {
+                handleClose();
+                clear();
+              }}
+            >
               {" "}
               Volver al inicio
             </Button>
           </Link>
         </Modal.Footer>
       </Modal>
-      );
-      {/* })} */}
     </>
   );
 };
-
-// html: (
-//   <p>
-//     ¡Muchas gracias por su compra ${buyer.nombre}! Se ha enviado a su
-//     mail ${buyer.email} el e-ticket con el orden de compra: {orderId}
-//   </p>
-// ),
-// confirmButtonText: "Volver al inicio",
 
 export default Checkout;
